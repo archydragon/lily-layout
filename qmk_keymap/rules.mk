@@ -3,8 +3,8 @@
 EXTRAKEY_ENABLE = yes     # Audio control and System control
 OLED_DRIVER_ENABLE = yes  # OLED display
 
-SRC +=  \
-	./lib/rgb_state_reader.c \
-	./lib/layer_state_reader.c \
-	./lib/logo_reader.c \
-	./lib/keylogger.c
+# SRC +=  \
+# 	./lib/rgb_state_reader.c \
+# 	./lib/layer_state_reader.c \
+# 	./lib/logo_reader.c \
+# 	./lib/keylogger.c
