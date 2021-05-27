@@ -10,21 +10,11 @@ extern keymap_config_t keymap_config;
 #    include "ssd1306.h"
 #endif
 
-#ifdef OLED_DRIVER_ENABLE
-static uint32_t oled_timer = 0;
-#endif
-
 enum layer_number {
     _QWERTY = 0,
     _LOWER,
     _RAISE,
     _ADJUST,
-};
-
-enum custom_keycodes {
-    QWERTY = SAFE_RANGE,
-    LOWER,
-    RAISE,
 };
 
 // clang-format off
@@ -50,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,       KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS, \
   KC_LCTRL, KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,       KC_J,    KC_K,    KC_L,    KC_SCLN, KC_GRV, \
   KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC, KC_RBRC, KC_N,       KC_M,    KC_COMM, KC_DOT,  KC_SLSH,  KC_RSFT, \
-                          KC_LCTL, KC_LALT, LOWER, KC_SPC,  KC_ENT,  RAISE, KC_BSPC, KC_RALT \
+                          KC_LCTL, KC_LALT, MO(_LOWER), KC_SPC,  KC_ENT,  MO(_RAISE), KC_BSPC, KC_RALT \
 ),
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.
@@ -124,7 +114,10 @@ layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_laye
 // SSD1306 OLED update loop, make sure to enable OLED_DRIVER_ENABLE=yes in
 // rules.mk
 #ifdef OLED_DRIVER_ENABLE
-oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_270; }
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    // Vertical orientation for both screens.
+    return OLED_ROTATION_270;
+}
 
 void render_space(void) { oled_write_P(PSTR("     "), false); }
 
@@ -260,10 +253,9 @@ void render_mod_status_ctrl_shift(uint8_t modifiers) {
     }
 }
 
-void render_logo(void) {
+void render_paw(void) {
     static const char PROGMEM paw[] = {0x8e, 0x8f, 0x90, 0x91, 0x92, 0xae, 0xaf, 0xb0, 0xb1, 0xb2, 0xce, 0xcf, 0xd0, 0xd1, 0xd2, 0};
     oled_write_P(paw, false);
-    // oled_write_P(PSTR("archy"), false);
 }
 
 void render_layer_state(void) {
@@ -277,66 +269,19 @@ void render_layer_state(void) {
     }
 }
 
-void render_status_main(void) {
-    render_logo();
-    render_space();
-    render_space();
-    render_layer_state();
-    render_space();
-    render_space();
-    render_mod_status_gui_alt(get_mods() | get_oneshot_mods());
-    render_mod_status_ctrl_shift(get_mods() | get_oneshot_mods());
-}
-
-void render_status_secondary(void) {
-    render_logo();
-    render_space();
-}
-
 void oled_task_user(void) {
-    if (timer_elapsed32(oled_timer) > 1000000) {
-        oled_off();
-        return;
-    }
-#    ifndef SPLIT_KEYBOARD
-    else {
-        oled_on();
-    }
-#    endif
-
     if (is_keyboard_master()) {
-        render_status_main();  // Renders the current keyboard state (layer, lock,
-                               // caps, scroll, etc)
+        render_paw();
+        render_space();
+        render_space();
+        render_layer_state();
+        render_space();
+        render_space();
+        render_mod_status_gui_alt(get_mods() | get_oneshot_mods());
+        render_mod_status_ctrl_shift(get_mods() | get_oneshot_mods());
     } else {
-        render_status_secondary();
+        render_paw();
     }
 }
 
-#endif
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-#ifdef OLED_DRIVER_ENABLE
-        oled_timer = timer_read32();
-#endif
-        // set_timelog();
-    }
-
-    switch (keycode) {
-        case LOWER:
-            if (record->event.pressed) {
-                layer_on(_LOWER);
-            } else {
-                layer_off(_LOWER);
-            }
-            return false;
-        case RAISE:
-            if (record->event.pressed) {
-                layer_on(_RAISE);
-            } else {
-                layer_off(_RAISE);
-            }
-            return false;
-            break;
-    }
-    return true;
-}
+#endif  // OLED_DRIVER_ENABLE
