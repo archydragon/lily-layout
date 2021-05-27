@@ -162,10 +162,11 @@ void render_qr(void) {
 
 void render_layer_state(void) {
     oled_write_P(PSTR("Layer"), false);
-    if (layer_state_is(_LOWER)) {
-        oled_write_P(PSTR("LOWER"), false);
-    } else if (layer_state_is(_RAISE)) {
-        oled_write_P(PSTR("RAISE"), false);
+    // Be aware that length of layer captions should be always 5 characters, otherwise the layout will look eerie.
+    if (layer_state_is(_NAVI)) {
+        oled_write_P(PSTR("NAVI "), false);
+    } else if (layer_state_is(_EXTRA)) {
+        oled_write_P(PSTR("EXTRA"), false);
     } else {
         oled_write_P(PSTR("MAIN "), false);
     }
