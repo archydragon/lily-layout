@@ -168,7 +168,7 @@ void render_layer_state(void) {
     } else if (layer_state_is(_EXTRA)) {
         oled_write_P(PSTR("EXTRA"), false);
     } else {
-        oled_write_P(PSTR("MAIN "), false);
+        oled_write_P(PSTR("C-DH "), false);
     }
 }
 
