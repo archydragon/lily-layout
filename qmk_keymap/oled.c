@@ -163,12 +163,25 @@ void render_qr(void) {
 void render_layer_state(void) {
     oled_write_P(PSTR("Layer"), false);
     // Be aware that length of layer captions should be always 5 characters, otherwise the layout will look eerie.
-    if (layer_state_is(_NAVI)) {
-        oled_write_P(PSTR("NAVI "), false);
-    } else if (layer_state_is(_EXTRA)) {
-        oled_write_P(PSTR("EXTRA"), false);
-    } else {
-        oled_write_P(PSTR("C-DH "), false);
+    switch (get_highest_layer(layer_state)) {
+        case _COLEMAK:
+            oled_write_P(PSTR("C-DH "), false);
+            break;
+        case _QWERTY:
+            oled_write_P(PSTR("QWER "), false);
+            break;
+        case _GAME:
+            oled_write_P(PSTR("GAME "), false);
+            break;
+        case _UTIL:
+            oled_write_P(PSTR("UTIL "), false);
+            break;
+        case _PAGE:
+            oled_write_P(PSTR("PAGE "), false);
+            break;
+        default:
+            oled_write_P(PSTR("?????"), false);
+            break;
     }
 }
 
