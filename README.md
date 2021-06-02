@@ -19,9 +19,9 @@
 ### Unsorted comments
 
 * Printable characters: black are being typed just by key press, blue ones are typed with Shift held, red ones are being typed with AltGr held. For letters, lower case variants are omitted.
-* Big thumb buttons: space when tapped, Shift when held; enter when tapped, NAVI layer when held.
+* Big thumb buttons: space when tapped, Shift when held; enter when tapped, UTIL layer when held.
 * Caps Lock is being kept just for layour switching purposes. Paired with AltGr, short tap to toggle.
-* LOCK button on NAVI and EXTRA layers locks them so modifier button could be released. To return to the main one, MAIN button is used. Known bug: layout locked in such way is not being displayed properly on OLED, I'll fix it as soon as I get more familiar with QMK code.
+* LOCK button on UTIL and PAGE layers locks them so modifier button could be released. To return to the main one, MAIN button is used. Known bug: layout locked in such way is not being displayed properly on OLED, I'll fix it as soon as I get more familiar with QMK code.
 * C-DH, QWER and GAME buttons on UTIL layer switch default typing layout to Colemak-DH, QWERTY and gaming one respectively.
 
 ### Printable PDF
