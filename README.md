@@ -7,7 +7,8 @@
 ## Layout rationale
 
 * Being able to type in English, Finnish, Swedish, Russian, Ukrainian and Belarussian when having just two system layouts.
-* All printable characters are fit into main keyboard layer, NAVI and EXTRA layers are used for other stuff.
+* Colemak-DH layout has been chosen for English as more finger friendly when typing.
+* All printable characters are fit into main keyboard layer, UTIL and PAGE layers are used for other stuff.
 * Punctuation marks used in both Latin and Cyrillic based languages are on the same keys to reduce cognitive load.
 * As few more than two keys combos when typing as possible.
 * No modifier keys under other fingers but thumbs.
@@ -19,23 +20,26 @@
 
 * Printable characters: black are being typed just by key press, blue ones are typed with Shift held, red ones are being typed with AltGr held. For letters, lower case variants are omitted.
 * Big thumb buttons: space when tapped, Shift when held; enter when tapped, NAVI layer when held.
-* Caps Lock is being kept just for layour switching purposes.
-* LOCK button on NAVI and EXTRA layers locks them so modifier button could be released. To return to the main one, MAIN button is used.
+* Caps Lock is being kept just for layour switching purposes. Paired with AltGr, short tap to toggle.
+* LOCK button on NAVI and EXTRA layers locks them so modifier button could be released. To return to the main one, MAIN button is used. Known bug: layout locked in such way is not being displayed properly on OLED, I'll fix it as soon as I get more familiar with QMK code.
+* C-DH, QWER and GAME buttons on UTIL layer switch default typing layout to Colemak-DH, QWERTY and gaming one respectively.
 
 ### Printable PDF
 
 * [Color](img/a4-cheatsheet.pdf)
 * [B&W](img/a4-cheatsheet-bw.pdf)
 
-(EXTRA layer is omitted in PDF documents.)
+![](img/latin-colemak.png)
 
-![](img/layout-latin.png)
+![](img/cyrillic.png)
 
-![](img/layout-cyrillic.png)
+![](img/held-util.png)
 
-![](img/layout-navi.png)
+![](img/held-page.png)
 
-![](img/layout-extra.png)
+![](img/latin-qwerty.png)
+
+![](img/game.png)
 
 *OLED info:*
 
@@ -45,7 +49,7 @@
 
 ## Artifacts
 
-[pCloud Drive](https://u.pcloud.link/publink/show?code=kZGws9XZRCucik9kgARIiFnrpq8VCV3cw587). So far, contains firmware binary and Windows input language installer archives. Everything is built from up-to-date master branch.
+[pCloud Drive](https://u.pcloud.link/publink/show?code=kZGws9XZRCucik9kgARIiFnrpq8VCV3cw587). So far, contains firmware binary and Windows input language installer archives. Everything is built from up-to-date main branch.
 
 
 ## Keyboard firmware build
@@ -80,4 +84,4 @@ So far, only Windows layouts have been built, tested and used in wild life. You 
 ## Extra credits
 
 * [QMK Logo Editor](https://joric.github.io/qle/)
-* Modifier keys status indicator stolen from [JReneHS's CRKBD config repo](https://github.com/JReneHS/crkb_conf)
+* Modifier keys status indicator stolen from [soundmonster's CRKBD config](https://github.com/qmk/qmk_firmware/blob/master/keyboards/crkbd/keymaps/soundmonster/keymap.c)
