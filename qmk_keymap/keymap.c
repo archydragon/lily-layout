@@ -34,11 +34,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
  [_COLEMAK] = LAYOUT( \
-   KC_ESC, KC_1, KC_2,    KC_3,    KC_4,   KC_5,                                    KC_6,      KC_7,            KC_8,    KC_9,    KC_0,    KC_EQL,  \
-   KC_TAB, KC_Q, KC_W,    KC_F,    KC_P,   KC_B,                                    KC_J,      KC_L,            KC_U,    KC_Y,    KC_SCLN, KC_MINS, \
-  KC_BSPC, KC_A, KC_R,    KC_S,    KC_T,   KC_G,                                    KC_M,      KC_N,            KC_E,    KC_I,    KC_O,    KC_GRV,  \
-  KC_LBRC, KC_Z, KC_X,    KC_C,    KC_D,   KC_V,        KC_COMM,  KC_DOT,           KC_K,      KC_H,            KC_QUOT, KC_BSLS, KC_SLSH, KC_RBRC, \
-                       KC_LCTL, KC_LALT, KC_MEH, LSFT_T(KC_SPC),  LT(_UTIL,KC_ENT), MO(_PAGE), RALT_T(KC_CAPS), KC_LGUI \
+   KC_ESC, KC_1, KC_2,    KC_3,    KC_4,          KC_5,                                    KC_6,      KC_7,            KC_8,    KC_9,    KC_0,    KC_EQL,  \
+   KC_TAB, KC_Q, KC_W,    KC_F,    KC_P,          KC_B,                                    KC_J,      KC_L,            KC_U,    KC_Y,    KC_SCLN, KC_MINS, \
+  KC_BSPC, KC_A, KC_R,    KC_S,    KC_T,          KC_G,                                    KC_M,      KC_N,            KC_E,    KC_I,    KC_O,    KC_GRV,  \
+  KC_LBRC, KC_Z, KC_X,    KC_C,    KC_D,          KC_V,        KC_COMM,  KC_DOT,           KC_K,      KC_H,            KC_QUOT, KC_BSLS, KC_SLSH, KC_RBRC, \
+                       KC_LCTL, KC_LALT, LCTL(KC_LSFT), LSFT_T(KC_SPC),  LT(_UTIL,KC_ENT), MO(_PAGE), RALT_T(KC_CAPS), KC_LGUI \
 ),
 
 /* QWERTY
@@ -57,11 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
  [_QWERTY] = LAYOUT( \
-   KC_ESC, KC_1, KC_2,    KC_3,    KC_4,   KC_5,                                    KC_6,       KC_7,            KC_8,    KC_9,    KC_0,    KC_EQL,  \
-   KC_TAB, KC_Q, KC_W,    KC_E,    KC_R,   KC_T,                                    KC_Y,       KC_U,            KC_I,    KC_O,    KC_P,    KC_MINS, \
-  KC_BSPC, KC_A, KC_S,    KC_D,    KC_F,   KC_G,                                    KC_H,       KC_J,            KC_K,    KC_L,    KC_SCLN, KC_GRV,  \
-  KC_LBRC, KC_Z, KC_X,    KC_C,    KC_V,   KC_B,        KC_COMM,  KC_DOT,           KC_N,       KC_M,            KC_QUOT, KC_BSLS, KC_SLSH, KC_RBRC, \
-                       KC_LCTL, KC_LALT, KC_MEH, LSFT_T(KC_SPC),  LT(_UTIL,KC_ENT), MO(_PAGE),  RALT_T(KC_CAPS), KC_LGUI \
+   KC_ESC, KC_1, KC_2,    KC_3,    KC_4,          KC_5,                                    KC_6,       KC_7,            KC_8,    KC_9,    KC_0,    KC_EQL,  \
+   KC_TAB, KC_Q, KC_W,    KC_E,    KC_R,          KC_T,                                    KC_Y,       KC_U,            KC_I,    KC_O,    KC_P,    KC_MINS, \
+  KC_BSPC, KC_A, KC_S,    KC_D,    KC_F,          KC_G,                                    KC_H,       KC_J,            KC_K,    KC_L,    KC_SCLN, KC_GRV,  \
+  KC_LBRC, KC_Z, KC_X,    KC_C,    KC_V,          KC_B,        KC_COMM,  KC_DOT,           KC_N,       KC_M,            KC_QUOT, KC_BSLS, KC_SLSH, KC_RBRC, \
+                       KC_LCTL, KC_LALT, LCTL(KC_LSFT), LSFT_T(KC_SPC),  LT(_UTIL,KC_ENT), MO(_PAGE),  RALT_T(KC_CAPS), KC_LGUI \
 ),
 
 /* Gaming layout
@@ -80,11 +80,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
  [_GAME] = LAYOUT( \
-   KC_ESC,  KC_GRV, KC_1,   KC_2,    KC_3,   KC_4,                             _______, _______, _______, _______, _______, _______, \
-     KC_6,    KC_7, KC_Q,   KC_W,    KC_E,   KC_R,                             _______, _______, _______, _______, _______, _______, \
-  KC_BSPC, KC_LSFT, KC_A,   KC_S,    KC_D,   KC_F,                             _______, _______, _______, _______, _______, _______, \
-     KC_5, KC_LCTL, KC_Z,   KC_X,    KC_C,   KC_V,   KC_G,  _______,           _______, _______, _______, _______, _______, _______, \
-                          KC_TAB, KC_LALT, KC_MEH, KC_SPC,  LT(_UTIL,KC_ENT),  _______, _______, _______ \
+   KC_ESC,  KC_GRV, KC_1,   KC_2,    KC_3,          KC_4,                             _______, _______, _______, _______, _______, _______, \
+     KC_6,    KC_7, KC_Q,   KC_W,    KC_E,          KC_R,                             _______, _______, _______, _______, _______, _______, \
+  KC_BSPC, KC_LSFT, KC_A,   KC_S,    KC_D,          KC_F,                             _______, _______, _______, _______, _______, _______, \
+     KC_5, KC_LCTL, KC_Z,   KC_X,    KC_C,          KC_V,   KC_G,  _______,           _______, _______, _______, _______, _______, _______, \
+                          KC_TAB, KC_LALT, LCTL(KC_LSFT), KC_SPC,  LT(_UTIL,KC_ENT),  _______, _______, _______ \
 ),
 
 /* UTIL
