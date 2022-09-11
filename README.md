@@ -8,6 +8,7 @@
 
 * Being able to type in English, Finnish, Swedish, Russian, Ukrainian and Belarussian when having just two system layouts.
 * Colemak-DH layout has been chosen for English as more finger friendly when typing.
+* Phonetic layout has been chosen for Cyrilic languages to not lose ability to type in Ukrainian or Russian on built-in laptop keyboards with this layout installed.
 * All printable characters are fit into main keyboard layer, UTIL and PAGE layers are used for other stuff.
 * Punctuation marks used in both Latin and Cyrillic based languages are on the same keys to reduce cognitive load.
 * As few more than two keys combos when typing as possible.
@@ -49,7 +50,7 @@
 
 ## Artifacts
 
-[pCloud Drive](https://u.pcloud.link/publink/show?code=kZGws9XZRCucik9kgARIiFnrpq8VCV3cw587). So far, contains firmware binary and Windows input language installer archives. Everything is built from up-to-date main branch.
+[pCloud Drive](https://e1.pcloud.link/publink/show?code=kZpXMRZjCs4DnfY9Df7yDb7JWtNVuoUbMJX). So far, contains firmware binary and Windows input language installer archives. Everything is built from up-to-date main branch.
 
 
 ## Keyboard firmware build
