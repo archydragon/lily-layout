@@ -25,10 +25,7 @@
 * LOCK button on UTIL and PAGE layers locks them so modifier button could be released. To return to the main one, MAIN button is used. Known bug: layout locked in such way is not being displayed properly on OLED, I'll fix it as soon as I get more familiar with QMK code.
 * C-DH, QWER and GAME buttons on UTIL layer switch default typing layout to Colemak-DH, QWERTY and gaming one respectively.
 
-### Printable PDF
-
-* [Color](img/a4-cheatsheet.pdf)
-* [B&W](img/a4-cheatsheet-bw.pdf)
+### [Printable PDF](img/a4-cheatsheet.pdf)
 
 ![](img/latin-colemak.png)
 
