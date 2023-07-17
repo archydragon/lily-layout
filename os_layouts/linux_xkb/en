@@ -1,0 +1,63 @@
+// https://github.com/archydragon/lily-layout
+// English layout with additional characters for Finnish/Swedish in 3rd layer
+partial alphanumeric_keys
+xkb_symbols "archlily" {
+  name[Group1] = "English (archlily)";
+
+  // number row
+  key <TLDE> { [ asciitilde, U2248                ] };
+  key <AE01> { [ 1,          exclam               ] };
+  key <AE02> { [ 2,          at                   ] };
+  key <AE03> { [ 3,          numbersign           ] };
+  key <AE04> { [ 4,          dollar,    EuroSign  ] };
+  key <AE05> { [ 5,          percent              ] };
+  key <AE06> { [ 6,          quotedbl             ] };
+  key <AE07> { [ 7,          question             ] };
+  key <AE08> { [ 8,          asterisk             ] };
+  key <AE09> { [ 9,          slash                ] };
+  key <AE10> { [ 0,          backslash            ] };
+  key <AE11> { [ minus,      underscore, emdash   ] };
+  key <AE12> { [ equal,      plus,       notequal ] };
+
+  // first row
+  key <AD01> { [ q,          Q,            aring,      Aring      ] };
+  key <AD02> { [ w,          W                                    ] };
+  key <AD03> { [ e,          E,            downarrow              ] };
+  key <AD04> { [ r,          R,            registered             ] };
+  key <AD05> { [ t,          T,            trademark              ] };
+  key <AD06> { [ y,          Y                                    ] };
+  key <AD07> { [ u,          U,            uparrow                ] };
+  key <AD08> { [ i,          I,            rightarrow             ] };
+  key <AD09> { [ o,          O,            odiaeresis, Odiaeresis ] };
+  key <AD10> { [ p,          P                                    ] };
+  key <AD11> { [ parenleft,  bracketleft,  braceleft              ] };
+  key <AD12> { [ parenright, bracketright, braceright             ] };
+
+  // second row
+  key <AC01> { [ a,          A,          adiaeresis, Adiaeresis ] };
+  key <AC02> { [ s,          S                                  ] };
+  key <AC03> { [ d,          D                                  ] };
+  key <AC04> { [ f,          F                                  ] };
+  key <AC05> { [ g,          G                                  ] };
+  key <AC06> { [ h,          H                                  ] };
+  key <AC07> { [ j,          J                                  ] };
+  key <AC08> { [ k,          K                                  ] };
+  key <AC09> { [ l,          L                                  ] };
+  key <AC10> { [ bar,        asciicircum                        ] };
+  key <AC11> { [ apostrophe, quotedbl                           ] };
+  key <BKSL> { [ ampersand,  bar                                ] };
+
+  // third row
+  key <AB01> { [ z,      Z                    ] };
+  key <AB02> { [ x,      X                    ] };
+  key <AB03> { [ c,      C,         copyright ] };
+  key <AB04> { [ v,      V                    ] };
+  key <AB05> { [ b,      B                    ] };
+  key <AB06> { [ n,      N,         leftarrow ] };
+  key <AB07> { [ m,      M                    ] };
+  key <AB08> { [ comma,  semicolon, less      ] };
+  key <AB09> { [ period, colon,     greater   ] };
+  key <AB10> { [ grave,  acute                ] };
+
+  include "level3(ralt_switch)"
+};

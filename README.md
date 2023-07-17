@@ -47,8 +47,21 @@
 
 ## Artifacts
 
+### Windows
+
 [pCloud Drive](https://e1.pcloud.link/publink/show?code=kZpXMRZjCs4DnfY9Df7yDb7JWtNVuoUbMJX). So far, contains firmware binary and Windows input language installer archives. Everything is built from up-to-date main branch.
 
+### Linux (X11 xkb)
+
+You need to update xkb symbols data under `/usr/share/X11/xkb/symbols/` to support new layouts. There is a single file per each layout, so you need to edit e.g. `/usr/share/X11/xkb/symbols/us` file for English one. Paste the content of `os_layouts/linux_xkb/en` file to the end of symbols file.
+
+Enabling new layouts example:
+
+```
+setxkbmap -layout "us,ru" -variant "archlily,archlily" -option 'grp:caps_toggle'
+```
+
+(If you're using a proper DE, you'll figure it out.)
 
 ## Keyboard firmware build
 

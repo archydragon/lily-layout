@@ -1,0 +1,62 @@
+// https://github.com/archydragon/lily-layout
+// Modified RUU phonetic layout - Ukrainian base
+xkb_symbols "archlily" {
+  name[Group1] = "Ukrainian phonetic (RUU archlily)";
+
+  // number row
+  key <TLDE> { [ Cyrillic_che, Cyrillic_CHE           ] };
+  key <AE01> { [ 1,            exclam                 ] };
+  key <AE02> { [ 2,            at                     ] };
+  key <AE03> { [ 3,            numbersign, numerosign ] };
+  key <AE04> { [ 4,            dollar,     EuroSign   ] };
+  key <AE05> { [ 5,            percent                ] };
+  key <AE06> { [ 6,            quotedbl               ] };
+  key <AE07> { [ 7,            question               ] };
+  key <AE08> { [ 8,            asterisk               ] };
+  key <AE09> { [ 9,            slash                  ] };
+  key <AE10> { [ 0,            backslash              ] };
+  key <AE11> { [ minus,        underscore, emdash     ] };
+  key <AE12> { [ equal,        plus,       notequal   ] };
+
+  // first row
+  key <AD01> { [ Cyrillic_ya,  Cyrillic_YA                                            ] };
+  key <AD02> { [ Cyrillic_sha, Cyrillic_SHA                                           ] };
+  key <AD03> { [ Cyrillic_ie,  Cyrillic_IE,  Cyrillic_io,         Cyrillic_IO         ] };
+  key <AD04> { [ Cyrillic_er,  Cyrillic_ER                                            ] };
+  key <AD05> { [ Cyrillic_te,  Cyrillic_TE                                            ] };
+  key <AD06> { [ Ukrainian_i,  Ukrainian_I,  Ukrainian_yi,        Ukrainian_YI,       ] };
+  key <AD07> { [ Cyrillic_u,   Cyrillic_U,   Byelorussian_shortu, Byelorussian_SHORTU ] };
+  key <AD08> { [ Cyrillic_i,   Cyrillic_I,   Cyrillic_yeru,       Cyrillic_YERU       ] };
+  key <AD09> { [ Cyrillic_o,   Cyrillic_O                                             ] };
+  key <AD10> { [ Cyrillic_pe,  Cyrillic_PE                                            ] };
+  key <AD11> { [ parenleft,    bracketleft,  braceleft                                ] };
+  key <AD12> { [ parenright,   bracketright, braceright                               ] };
+
+  // second row
+  key <AC01> { [ Cyrillic_a,        Cyrillic_A                                                              ] };
+  key <AC02> { [ Cyrillic_es,       Cyrillic_ES                                                             ] };
+  key <AC03> { [ Cyrillic_de,       Cyrillic_DE                                                             ] };
+  key <AC04> { [ Cyrillic_ef,       Cyrillic_EF                                                             ] };
+  key <AC05> { [ Cyrillic_ghe,      Cyrillic_GHE,      Ukrainian_ghe_with_upturn, Ukrainian_GHE_WITH_UPTURN ] };
+  key <AC06> { [ Cyrillic_ha,       Cyrillic_HA,       rightsinglequotemark                                 ] };
+  key <AC07> { [ Cyrillic_shorti,   Cyrillic_SHORTI                                                         ] };
+  key <AC08> { [ Cyrillic_ka,       Cyrillic_KA                                                             ] };
+  key <AC09> { [ Cyrillic_el,       Cyrillic_EL                                                             ] };
+  key <AC10> { [ Cyrillic_zhe,      Cyrillic_ZHE                                                            ] };
+  key <AC11> { [ Ukrainian_ie,      Ukrainian_IE,      Cyrillic_e,                Cyrillic_E,               ] };
+  key <BKSL> { [ Cyrillic_softsign, Cyrillic_SOFTSIGN, Cyrillic_hardsign,         Cyrillic_HARDSIGN         ] };
+
+  // third row
+  key <AB01> { [ Cyrillic_ze,    Cyrillic_ZE                   ] };
+  key <AB02> { [ Cyrillic_shcha, Cyrillic_SHCHA                ] };
+  key <AB03> { [ Cyrillic_tse,   Cyrillic_TSE                  ] };
+  key <AB04> { [ Cyrillic_ve,    Cyrillic_VE                   ] };
+  key <AB05> { [ Cyrillic_be,    Cyrillic_BE                   ] };
+  key <AB06> { [ Cyrillic_en,    Cyrillic_EN                   ] };
+  key <AB07> { [ Cyrillic_em,    Cyrillic_EM                   ] };
+  key <AB08> { [ comma,          semicolon,     guillemotleft  ] };
+  key <AB09> { [ period,         colon,         guillemotright ] };
+  key <AB10> { [ Cyrillic_yu,    Cyrillic_YU,   ellipsis       ] };
+
+  include "level3(ralt_switch)"
+};
