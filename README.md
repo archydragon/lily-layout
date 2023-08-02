@@ -67,7 +67,7 @@ setxkbmap -layout "us,ru" -variant "archlily,archlily" -option 'grp:caps_toggle'
 
 I use Ubuntu WSL running under Windows 10 for building. MSYS2 environment which is another option for QMK hasn't been tested.
 
-[QMK installation instructions.](https://beta.docs.qmk.fm/tutorial/newbs_getting_started)
+[QMK installation instructions.](https://docs.qmk.fm/#/newbs_getting_started)
 
 ```
 ~ $ git clone https://github.com/qmk/qmk_firmware
