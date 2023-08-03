@@ -8,12 +8,7 @@ extern keymap_config_t keymap_config;
 #    include "split_util.h"
 #endif
 
-#ifdef OLED_DRIVER_ENABLE
-#    ifdef SSD1306OLED
-#        include "ssd1306.h"
-#    endif
-#    include "oled.c"
-#endif
+#include "oled.c"
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

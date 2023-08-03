@@ -1,7 +1,9 @@
 #pragma once
 
 // All the logic forSSD1306 OLED update loop lives in this file.
-// Make sure to enable OLED_DRIVER_ENABLE=yes in rules.mk
+// Make sure to enable OLED_ENABLE=yes in rules.mk
+
+#ifdef OLED_ENABLE
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     // Vertical orientation for both screens.
@@ -185,7 +187,7 @@ void render_layer_state(void) {
     }
 }
 
-void oled_task_user(void) {
+bool oled_task_user(void) {
     if (is_keyboard_master()) {
         render_paw();
         render_space();
@@ -201,4 +203,8 @@ void oled_task_user(void) {
         render_space();
         render_qr();
     }
+
+    return false;
 }
+
+#endif  // OLED_ENABLE
