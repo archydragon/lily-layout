@@ -32,6 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define QUICK_TAP_TERM 0
 #define TAPPING_TERM 200
+#define HOLD_ON_OTHER_KEY_PRESS
 
 // Override OLED font with our custom one.
 #if defined(OLED_FONT_H)
