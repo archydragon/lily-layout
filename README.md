@@ -9,10 +9,11 @@
 * Being able to type in English, Finnish, Swedish, Russian, Ukrainian and Belarussian when having just two system layouts.
 * Colemak-DH layout has been chosen for English as more finger friendly when typing.
 * Phonetic layout has been chosen for Cyrilic languages to not lose ability to type in Ukrainian or Russian on built-in laptop keyboards with this layout installed.
-* All printable characters are fit into main keyboard layer, UTIL and PAGE layers are used for other stuff.
+* All printable characters are fit into main keyboard layer, NAVI layer is used for navigation keys and some other stuff.
 * Punctuation marks used in both Latin and Cyrillic based languages are on the same keys to reduce cognitive load.
 * As few more than two keys combos when typing as possible.
 * No modifier keys under other fingers but thumbs.
+* August 2023 update: now with mouse control support, see MOUSE layer.
 
 
 ## Cheatsheet
@@ -20,10 +21,10 @@
 ### Unsorted comments
 
 * Printable characters: black are being typed just by key press, blue ones are typed with Shift held, red ones are being typed with AltGr held. For letters, lower case variants are omitted.
-* Big thumb buttons: space when tapped, Shift when held; enter when tapped, UTIL layer when held.
+* Big thumb buttons: space when tapped, Shift when held; enter when tapped, NAVI layer when held.
 * Caps Lock is being kept just for layour switching purposes. Paired with AltGr, short tap to toggle.
-* LOCK button on UTIL and PAGE layers locks them so modifier button could be released. To return to the main one, MAIN button is used. Known bug: layout locked in such way is not being displayed properly on OLED, I'll fix it as soon as I get more familiar with QMK code.
-* C-DH, QWER and GAME buttons on UTIL layer switch default typing layout to Colemak-DH, QWERTY and gaming one respectively.
+* LOCK button on NAVI and MOUSE layers locks them so modifier button could be released. To return to the main one, MAIN button is used. Known bug: layout locked in such way is not being displayed properly on OLED, I'll fix it as soon as I get more familiar with QMK code.
+* C-DH, QWER and GAME buttons on NAVI layer switch default typing layout to Colemak-DH, QWERTY and gaming one respectively.
 
 ### [Printable PDF](img/a4-cheatsheet.pdf)
 
@@ -31,9 +32,9 @@
 
 ![](img/cyrillic.png)
 
-![](img/held-util.png)
+![](img/held-navi.png)
 
-![](img/held-page.png)
+![](img/held-mouse.png)
 
 ![](img/latin-qwerty.png)
 
