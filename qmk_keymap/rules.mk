@@ -3,3 +3,4 @@
 EXTRAKEY_ENABLE = yes # Audio control and System control
 OLED_ENABLE = yes     # OLED display
 OLED_DRIVER = SSD1306
+MOUSEKEY_ENABLE = yes

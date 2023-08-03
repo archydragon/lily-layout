@@ -175,11 +175,11 @@ void render_layer_state(void) {
         case _GAME:
             oled_write_P(PSTR("GAME "), false);
             break;
-        case _UTIL:
-            oled_write_P(PSTR("UTIL "), false);
+        case _NAVI:
+            oled_write_P(PSTR("NAVI "), false);
             break;
-        case _PAGE:
-            oled_write_P(PSTR("PAGE "), false);
+        case _MOUSE:
+            oled_write_P(PSTR("MOUSE"), false);
             break;
         default:
             oled_write_P(PSTR("?????"), false);

@@ -22,8 +22,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | BcSp |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |   N  |   E  |   I  |   O  |  `   |
  * |------+------+------+------+------+------|   ,   |    |    .  |------+------+------+------+------+------|
  * |   [  |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |   '  |   \  |   /  |  ]   |
- * `-----------------------------------------/ LShift/     \ UTIL \-----------------------------------------'
- *                   | LCtl | LAlt |  Meh | /[Space]/       \[Entr]\  | PAGE | RAlt | LGUI |
+ * `-----------------------------------------/ LShift/     \ NAVI \-----------------------------------------'
+ *                   | LCtl | LAlt |  Meh | /[Space]/       \[Entr]\  | MOUS | RAlt | LGUI |
  *                   |      |      |      |/       /         \      \ |      |[Caps]|      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_TAB, KC_Q, KC_W,    KC_F,    KC_P,          KC_B,                                    KC_J,      KC_L,            KC_U,    KC_Y,    KC_SCLN, KC_MINS, \
   KC_BSPC, KC_A, KC_R,    KC_S,    KC_T,          KC_G,                                    KC_M,      KC_N,            KC_E,    KC_I,    KC_O,    KC_GRV,  \
   KC_LBRC, KC_Z, KC_X,    KC_C,    KC_D,          KC_V,        KC_COMM,  KC_DOT,           KC_K,      KC_H,            KC_QUOT, KC_BSLS, KC_SLSH, KC_RBRC, \
-                       KC_LCTL, KC_LALT, LCTL(KC_LSFT), LSFT_T(KC_SPC),  LT(_UTIL,KC_ENT), MO(_PAGE), RALT_T(KC_CAPS), KC_LGUI \
+                       KC_LCTL, KC_LALT, LCTL(KC_LSFT), LSFT_T(KC_SPC),  LT(_NAVI,KC_ENT), MO(_MOUSE), RALT_T(KC_CAPS), KC_LGUI \
 ),
 
 /* QWERTY
@@ -45,8 +45,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | BcSp |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  `   |
  * |------+------+------+------+------+------|   ,   |    |    .  |------+------+------+------+------+------|
  * |   [  |   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   '  |   \  |   /  |  ]   |
- * `-----------------------------------------/ LShift/     \ UTIL \-----------------------------------------'
- *                   | LCtl | LAlt |  Meh | /[Space]/       \[Entr]\  | PAGE | RAlt | LGUI |
+ * `-----------------------------------------/ LShift/     \ NAVI \-----------------------------------------'
+ *                   | LCtl | LAlt |  Meh | /[Space]/       \[Entr]\  | MOUS | RAlt | LGUI |
  *                   |      |      |      |/       /         \      \ |      |[Caps]|      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_TAB, KC_Q, KC_W,    KC_E,    KC_R,          KC_T,                                    KC_Y,       KC_U,            KC_I,    KC_O,    KC_P,    KC_MINS, \
   KC_BSPC, KC_A, KC_S,    KC_D,    KC_F,          KC_G,                                    KC_H,       KC_J,            KC_K,    KC_L,    KC_SCLN, KC_GRV,  \
   KC_LBRC, KC_Z, KC_X,    KC_C,    KC_V,          KC_B,        KC_COMM,  KC_DOT,           KC_N,       KC_M,            KC_QUOT, KC_BSLS, KC_SLSH, KC_RBRC, \
-                       KC_LCTL, KC_LALT, LCTL(KC_LSFT), LSFT_T(KC_SPC),  LT(_UTIL,KC_ENT), MO(_PAGE),  RALT_T(KC_CAPS), KC_LGUI \
+                       KC_LCTL, KC_LALT, LCTL(KC_LSFT), LSFT_T(KC_SPC),  LT(_NAVI,KC_ENT), MO(_MOUSE), RALT_T(KC_CAPS), KC_LGUI \
 ),
 
 /* Gaming layout
@@ -75,21 +75,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
  [_GAME] = LAYOUT( \
-   KC_ESC,  KC_GRV, KC_1,   KC_2,    KC_3,          KC_4,                             _______, _______, _______, _______, _______, _______, \
-     KC_6,    KC_7, KC_Q,   KC_W,    KC_E,          KC_R,                             _______, _______, _______, _______, _______, _______, \
-  KC_BSPC, KC_LSFT, KC_A,   KC_S,    KC_D,          KC_F,                             _______, _______, _______, _______, _______, _______, \
-     KC_5, KC_LCTL, KC_Z,   KC_X,    KC_C,          KC_V,   KC_G,  _______,           _______, _______, _______, _______, _______, _______, \
-                          KC_TAB, KC_LALT, LCTL(KC_LSFT), KC_SPC,  LT(_UTIL,KC_ENT),  _______, _______, _______ \
+   KC_ESC,  KC_GRV, KC_1,   KC_2,    KC_3,          KC_4,                            _______, _______, _______, _______, _______, _______, \
+     KC_6,    KC_7, KC_Q,   KC_W,    KC_E,          KC_R,                            _______, _______, _______, _______, _______, _______, \
+  KC_BSPC, KC_LSFT, KC_A,   KC_S,    KC_D,          KC_F,                            _______, _______, _______, _______, _______, _______, \
+     KC_5, KC_LCTL, KC_Z,   KC_X,    KC_C,          KC_V,   KC_G,  _______,          _______, _______, _______, _______, _______, _______, \
+                          KC_TAB, KC_LALT, LCTL(KC_LSFT), KC_SPC,  LT(_NAVI,KC_ENT), _______, _______, _______ \
 ),
 
-/* UTIL
+/* NAVI
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | MAIN |  F1  |  F2  |  F3  |  F4  |  F5  |                    | LOCK |      |      |      |      | PrScr|
+ * | MAIN |  F1  |  F2  |  F3  |  F4  |  F5  |                    |  F6  |  F7  |  F8  |  F9  |  F10 | PrScr|
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |  F6  |  F7  |  F8  |  F9  | F10  |                    |      |      |  Up  |      | |<<  | Break|
+ * |      |      |      | PgUp |      | F11  |                    |  F12 |      |  Up  |      | |<<  | Break|
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Del  | F11  | F12  |      |      |      |-------.    ,-------|      | Left | Down | Rght |  ||  |WinBrk|
- * |------+------+------+------+------+------|Ctr+Sh |    |       |------+------+------+------+------+------|
+ * | Del  |      | Home | PgDn | End  |      |-------.    ,-------|      | Left | Down | Rght |  ||  |WinBrk|
+ * |------+------+------+------+------+------|Ctr+Sh |    | LOCK  |------+------+------+------+------+------|
  * | Ins  |      |      |LC+Ins|      |LS+Ins|-------|    |-------|      |      |      |      |  >>| |      |
  * `-----------------------------------------/ LShift/     \      \-----------------------------------------'
  *                   | LCtl | LAlt |  Meh | /[Space]/       \      \  | C-DH | QWER | GAME |
@@ -97,35 +97,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 
-[_UTIL] = LAYOUT( \
-  DF(_COLEMAK),   KC_F1,   KC_F2,        KC_F3,   KC_F4,        KC_F5,                           DF(_UTIL), _______, _______, _______,  _______, KC_PSCR,       \
-       _______,   KC_F6,   KC_F7,        KC_F8,   KC_F9,       KC_F10,                           _______,   _______, KC_UP,   _______,  KC_MPRV, KC_PAUS,       \
-        KC_DEL,  KC_F11,  KC_F12,      _______, _______,      _______,                           _______,   KC_LEFT, KC_DOWN, KC_RGHT,  KC_MPLY, RGUI(KC_PAUS), \
-        KC_INS, _______, _______, LCTL(KC_INS), _______, LSFT(KC_INS), C_S_T(KC_LSFT),  _______, _______,   _______, _______,  _______, KC_MNXT, _______,       \
-                                       KC_TRNS, KC_TRNS,      KC_TRNS,        KC_TRNS,  _______, COLEMAK,   QWERTY,  GAME \
+[_NAVI] = LAYOUT( \
+  DF(_COLEMAK),   KC_F1,   KC_F2,   KC_F3,        KC_F4,        KC_F5,                       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PSCR,       \
+       _______, _______, _______, KC_PGUP,      _______,       KC_F11,                       KC_F11,  _______, KC_UP,   _______, KC_MPRV, KC_PAUS,       \
+        KC_DEL, _______, KC_HOME, KC_PGDN,       KC_END,      _______,                       _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_MPLY, RGUI(KC_PAUS), \
+        KC_INS, _______, _______, LCTL(KC_INS), _______, LSFT(KC_INS), _______,  DF(_NAVI),  _______, _______, _______, _______, KC_MNXT, _______,       \
+                                       KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS,    _______,  COLEMAK, QWERTY,  GAME \
 ),
 
-/* PAGE
+/* MOUSE
+ *                __ wheel control __                                     __ cursor control __
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | MAIN |      |      |      |      |      |                    | LOCK |      |      |      |      |      |
+ * | MAIN |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |                    |      |      | PgUp |      |      |      |
+ * |      |      |      | MWUp |      |      |                    |      |  M1  | MUp  |  M2  |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------.    ,-------|      | Home | PgDn | End  |      |      |
- * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------|    |-------|      |      |      |      |      |      |
+ * |      |      | MWLt | MWDn | MWRt |      |-------.    ,-------|      | MLft | MDn  | MRgt |  M1  |      |
+ * |------+------+------+------+------+------|       |    | LOCK  |------+------+------+------+------+------|
+ * |      |      |      |      |      |      |-------|    |-------|      |  M4  |  M3  |  M5  |      |      |
  * `-----------------------------------------/ Lshift/     \      \-----------------------------------------'
  *                   | LCtl | LAlt |  Meh | /[Space]/       \      \  |      |      |      |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
 
-[_PAGE] = LAYOUT( \
-  DF(_COLEMAK), _______, _______, _______, _______, _______,                    DF(_PAGE), _______, _______, _______, _______, _______, \
-       _______, _______, _______, _______, _______, _______,                    _______,    _______, KC_PGUP, _______, _______, _______, \
-       _______, _______, _______, _______, _______, _______,                    _______,    KC_HOME, KC_PGDN, KC_END,  _______, _______, \
-       _______, _______, _______, _______, _______, _______, _______,  _______, _______,    _______, _______, _______, _______, _______, \
-                                  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  _______, _______,    _______, _______ \
+[_MOUSE] = LAYOUT( \
+  DF(_COLEMAK), _______, _______, _______, _______, _______,                       _______, _______, _______, _______, _______, _______, \
+       _______, _______, _______, KC_WH_U, _______, _______,                       _______, KC_BTN1, KC_MS_U, KC_BTN2, _______, _______, \
+       _______, _______, KC_WH_L, KC_WH_D, KC_WH_R, _______,                       _______, KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN1, _______, \
+       _______, _______, _______, _______, _______, _______, _______,  DF(_MOUSE), _______, KC_BTN4, KC_BTN3, KC_BTN5, _______, _______, \
+                                  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  _______,    _______, _______, _______ \
 ),
 
 /* ADJUST (never used actually, saved from original config)
@@ -153,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_layer_state(state, _UTIL, _PAGE, _ADJUST); }
+layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_layer_state(state, _NAVI, _MOUSE, _ADJUST); }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

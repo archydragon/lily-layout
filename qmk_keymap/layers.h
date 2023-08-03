@@ -6,8 +6,8 @@ enum lily_layers {
     _COLEMAK = 0,
     _QWERTY,
     _GAME,
-    _UTIL,
-    _PAGE,
+    _NAVI,
+    _MOUSE,
     _ADJUST,
 };
 
