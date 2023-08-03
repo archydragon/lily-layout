@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL_PD2
 
 #define QUICK_TAP_TERM 0
-#define TAPPING_TERM 100
+#define TAPPING_TERM 200
 
 // Override OLED font with our custom one.
 #if defined(OLED_FONT_H)
