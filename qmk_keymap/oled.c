@@ -165,7 +165,7 @@ void render_qr(void) {
 void render_layer_state(void) {
     oled_write_P(PSTR("Layer"), false);
     // Be aware that length of layer captions should be always 5 characters, otherwise the layout will look eerie.
-    switch (get_highest_layer(layer_state)) {
+    switch (get_highest_layer(layer_state | default_layer_state)) {
         case _COLEMAK:
             oled_write_P(PSTR("C-DH "), false);
             break;
