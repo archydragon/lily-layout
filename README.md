@@ -3,6 +3,8 @@
 * [Keyboard maintainer](https://github.com/kata0510/Lily58)
 * [QMK repo tree](https://github.com/qmk/qmk_firmware/tree/master/keyboards/lily58)
 
+Update 2023-11-20: moved to [Codeberg](https://codeberg.org/archydragon/lily-layout)
+
 
 ## Layout rationale
 
